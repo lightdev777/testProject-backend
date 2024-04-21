@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cart {
+  collectionName: String!
+  description: String!
+  identifier: String!
+  image_url: String!
+  name: String!
+}
+
+type DefaultResponse {
+  message: String!
+}
+
+type Mutation {
+  cartClear: Boolean!
+  cartCreat(collectionName: String!, description: String!, identifier: ID!, image_url: String!, name: String!): Cart!
+  cartRemoveById(identifier: ID!): Boolean!
+}
+
+type Query {
+  cartById(identifier: ID!): Cart
+  cartList: [Cart!]!
+  health: DefaultResponse!
+}
